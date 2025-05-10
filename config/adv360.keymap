@@ -6,6 +6,8 @@
 #include <dt-bindings/zmk/backlight.h>
 #include <dt-bindings/zmk/pointing.h>
 
+/* hello */
+
 / {
     behaviors {
       #include "macros.dtsi"
