@@ -11,7 +11,8 @@
 
 / {
     behaviors {
-        #include "macros.dtsi"
+      #include "macros.dtsi"
+      #include "extra_morphs.dtsi"
       #include "version.dtsi"
 
         hm: homerow_mods {
