@@ -90,7 +90,7 @@ dvp_exclamation_n8: dvp_exclamation_n8 {
     compatible = "zmk,behavior-mod-morph";
     label = "dvp_exclamation_n8";
     #binding-cells = <0>;
-    bindings = <&kp EXCLAMATION>, <&kp N8>;
+    bindings = <&kp EXCLAMATION>, <&kp N0>;
     mods = <(MOD_LSFT|MOD_RSFT|MOD_LALT|MOD_LCTL|MOD_RCTL|MOD_RGUI|MOD_LGUI)>;
     keep-mods = <(MOD_LALT|MOD_LCTL|MOD_RCTL|MOD_RGUI|MOD_LGUI)>;
 };
