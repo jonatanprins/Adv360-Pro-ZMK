@@ -11,7 +11,7 @@
 
 / {
     behaviors {
-      #include "macros.dtsi"
+        #include "macros.dtsi"
       #include "extra_morphs.dtsi"
       #include "version.dtsi"
 
@@ -32,11 +32,11 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&kp EQUAL  &kp N1     &kp N2    &kp N3    &kp N4     &kp N5  &tog 5                                                   &mo 7      &kp N6  &kp N7    &kp N8        &kp N9    &kp N0    &kp MINUS
-&kp TAB    &kp Q      &kp W     &kp F     &kp P      &kp B   &none                                                    &none      &kp J   &kp L     &kp U         &kp Y     &kp SQT   &kp BSLH
-&kp ESC    &kp A      &kp R     &kp S     &kp T      &kp G   &none     &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL  &none      &kp M   &kp N     &kp E         &kp I     &kp O     &kp MINUS
-&sk LSHFT  &kp Z      &kp X     &kp C     &kp D      &kp V                        &kp HOME      &kp PG_UP                        &kp K   &kp H     &kp COMMA     &kp DOT   &kp SEMI  &sk RSHFT
-&mo 5      &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT          &kp BSPC  &kp SLASH  &mo 5       &kp PG_DN  &kp ENTER  &kp SPACE          &kp DOWN  &kp UP_ARROW  &kp LBKT  &kp RBKT  &mo 5
+&kp EQUAL  &kp N1     &kp N2    &kp N3    &kp N4     &kp N5  &tog 5                                                     &mo 7      &kp N6  &kp N7    &kp N8        &kp N9    &kp N0    &kp MINUS
+&kp TAB    &kp Q      &kp W     &kp F     &kp P      &kp B   &none                                                      &none      &kp J   &kp L     &kp U         &kp Y     &kp SQT   &kp BSLH
+&kp ESC    &kp A      &kp R     &kp S     &kp T      &kp G   &none     &kp LCTRL  &kp LALT        &kp LGUI   &kp RCTRL  &none      &kp M   &kp N     &kp E         &kp I     &kp O     &kp MINUS
+&sk LSHFT  &kp Z      &kp X     &kp C     &kp D      &kp V                        &kp DELETE      &kp PG_UP                        &kp K   &kp H     &kp COMMA     &kp DOT   &kp SEMI  &sk RSHFT
+&mo 5      &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT          &kp BSPC  &kp SLASH  &mo 5           &kp PG_DN  &kp ENTER  &kp SPACE          &kp DOWN  &kp UP_ARROW  &kp LBKT  &kp RBKT  &mo 5
             >;
         };
 
@@ -72,18 +72,18 @@
 
         programmers_num_row {
             bindings = <
-&dvp_ampersand_percent  &dvp_left_bracket_n7  &dvp_left_brace_n5  &dvp_right_brace_n3  &dvp_left_parenthesis_n1  &dvp_equal_n9            &trans                                                  &trans  &dvp_asterisk_n0  &dvp_right_parenthesis_n2  &dvp_plus_n4  &dvp_right_bracket_n6  &dvp_exclamation_n8  &dvp_hash_grave
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                            &trans  &trans  &trans  &trans  &trans  &trans  &dvp_pipe_bslh
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                        &trans  &trans  &trans  &trans  &trans  &trans
- &trans     &dvp_dollar_tilde              &trans               &trans                    &trans                           &trans  &trans  &trans                  &trans  &trans  &trans                                       &trans        &trans              &kp SLASH        &dvp_at_caret           &trans
+&dvp_ampersand_percent  &dvp_left_bracket_n7  &dvp_left_brace_n5  &dvp_right_brace_n3  &dvp_left_parenthesis_n1  &dvp_equal_n9  &trans                                      &trans  &dvp_asterisk_n0  &dvp_right_parenthesis_n2  &dvp_plus_n4  &dvp_right_bracket_n6  &dvp_exclamation_n8  &dvp_hash_grave
+&trans                  &trans                &trans              &trans               &trans                    &trans         &trans                                      &trans  &trans            &trans                     &trans        &trans                 &trans               &dvp_pipe_bslh
+&trans                  &trans                &trans              &trans               &trans                    &trans         &trans  &trans  &trans      &trans  &trans  &trans  &trans            &trans                     &trans        &trans                 &trans               &trans
+&trans                  &trans                &trans              &trans               &trans                    &trans                         &trans      &trans                  &trans            &trans                     &trans        &trans                 &trans               &trans
+&trans                  &dvp_dollar_tilde     &trans              &trans               &trans                                   &trans  &trans  &trans      &trans  &trans  &trans                    &trans                     &trans        &kp SLASH              &dvp_at_caret        &trans
             >;
         };
 
         keypad {
             display-name = "Kp";
             bindings = <
-&trans  &trans  &trans &trans &trans  &trans  &trans                                                   &mo 7      &kp N6  &kp KP_NUM  &kp KP_EQUAL  &kp KP_DIVIDE  &kp KP_MULTIPLY  &kp MINUS
+&trans     &trans     &trans    &trans    &trans     &trans  &trans                                                   &mo 7      &kp N6  &kp KP_NUM  &kp KP_EQUAL  &kp KP_DIVIDE  &kp KP_MULTIPLY  &kp MINUS
 &kp TAB    &kp Q      &kp W     &kp E     &kp R      &kp T   &none                                                    &none      &kp Y   &kp KP_N7   &kp KP_N8     &kp KP_N9      &kp KP_MINUS     &kp BSLH
 &kp ESC    &kp A      &kp S     &kp D     &kp F      &kp G   &none     &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL  &none      &kp H   &kp KP_N4   &kp KP_N5     &kp KP_N6      &kp KP_PLUS      &kp SQT
 &kp LSHFT  &kp Z      &kp X     &kp C     &kp V      &kp B                        &kp HOME      &kp PG_UP                        &kp N   &kp KP_N1   &kp KP_N2     &kp KP_N3      &kp KP_ENTER     &kp RSHFT
