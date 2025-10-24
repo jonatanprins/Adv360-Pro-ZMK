@@ -24,7 +24,6 @@
       #include "extra_morphs.dtsi"
       #include "version.dtsi"
 
-
         layer_tap: layer_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAP";
@@ -92,11 +91,11 @@
 
         symbol_layer_activation {
             bindings = <
-&trans        &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans        &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&mo 6         &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &mo 6
-&trans        &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans        &trans  &trans  &trans  &trans          &trans  &mo 7   &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp ESCAPE  &kp RC(A)  &kp LC(C)  &trans  &trans                                                &trans  &kp HOME  &kp DOWN  &kp UP_ARROW  &kp END  &trans  &trans
+&trans  &trans  &trans      &trans     &trans     &trans  &trans                                                &trans  &trans    &trans    &trans        &trans   &trans  &trans
+&mo 6   &trans  &trans      &trans     &trans     &trans  &trans  &mt LCTRL ESCAPE  &trans      &trans  &trans  &trans  &trans    &trans    &trans        &trans   &trans  &mo 6
+&trans  &trans  &trans      &trans     &trans     &trans                            &trans      &trans                  &trans    &trans    &trans        &trans   &trans  &trans
+&trans  &trans  &trans      &trans     &trans             &trans  &mo 7             &trans      &trans  &trans  &trans            &trans    &trans        &trans   &trans  &trans
             >;
         };
 
