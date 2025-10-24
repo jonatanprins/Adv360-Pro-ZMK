@@ -13,9 +13,10 @@
 #define ALT_MOD 3
 #define PROGRAMMERS_DVORAK 4
 #define PRIMP_PROGRAMMERS 5
-#define KEY 6
-#define FN 7
-#define MOD 8
+#define SYMBOL_LAYER 6
+#define KEY 7
+#define FN 8
+#define MOD 9
 
 / {
     behaviors {
@@ -98,6 +99,17 @@
 &trans                  &primp_dollar_tilde     &trans              &trans               &trans                                   &trans  &trans  &trans      &trans  &trans  &trans                    &trans                     &trans        &kp SLASH              &primp_at_caret        &trans
             >;
         };
+
+        symbol_layer {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans                  &trans                &trans              &trans               &trans                    &trans         &trans                                      &trans  &trans            &trans                     &trans        &trans                 &trans               &trans
+&trans                  &trans                &trans              &trans               &trans                    &trans         &trans  &trans  &trans      &trans  &trans  &trans  &trans            &trans                     &trans        &trans                 &trans               &trans
+&trans                  &trans                &trans              &trans               &trans                    &trans                         &trans      &trans                  &trans            &trans                     &trans        &trans                 &trans               &trans
+&trans                  &trans     &trans              &trans               &trans                                   &trans  &trans  &trans      &trans  &trans  &trans                    &trans                     &trans        &trans &trans        &trans
+            >;
+        };
+
 
         keypad_layer {
             display-name = "Kp";
