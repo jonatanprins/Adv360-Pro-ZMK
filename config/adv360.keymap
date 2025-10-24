@@ -41,11 +41,11 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&kp EQUAL  &kp N1     &kp N2    &kp N3    &kp N4     &kp N5  &tog 5                                                     &mo MOD      &kp N6  &kp N7    &kp N8        &kp N9    &kp N0    &kp MINUS
-&kp TAB    &kp Q      &kp W     &kp F     &kp P      &kp B   &none                                                      &none      &kp J   &kp L     &kp U         &kp Y     &kp SQT   &kp BSLH
-&kp ESC    &kp A      &kp R     &kp S     &kp T      &kp G   &none     &kp LCTRL  &kp LALT        &kp LGUI   &kp RCTRL  &none      &kp M   &kp N     &kp E         &kp I     &kp O     &kp MINUS
+&kp EQUAL  &kp N1     &kp N2    &kp N3    &kp N4     &kp N5  &tog 5                                                     &mo MOD    &kp N6  &kp N7    &kp N8        &kp N9    &kp N0     &kp MINUS
+&kp TAB    &kp Q      &kp W     &kp F     &kp P      &kp B   &none                                                      &none      &kp J   &kp L     &kp U         &kp Y     &kp SQT    &kp BSLH
+&kp ESC    &kp A      &kp R     &kp S     &kp T      &kp G   &none     &kp LCTRL  &kp LALT        &kp LGUI   &kp RCTRL  &none      &kp M   &kp N     &kp E         &kp I     &kp O      &kp MINUS
 &sk LSHFT  &kp Z      &kp X     &kp C     &kp D      &kp V                        &kp DELETE      &kp PG_UP                        &kp K   &kp H     &kp COMMA     &kp DOT   &kp SLASH  &sk RSHFT
-&mo FN      &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT          &kp BSPC  &kp SEMI  &mo KEY           &kp PG_DN  &kp ENTER  &kp SPACE          &kp DOWN  &kp UP_ARROW  &kp LBKT  &kp RBKT  &mo FN
+&mo FN     &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT          &kp BSPC  &kp SEMI   &mo KEY         &kp PG_DN  &kp ENTER  &kp SPACE          &kp DOWN  &kp UP_ARROW  &kp LBKT  &kp RBKT   &mo FN
             >;
         };
 
@@ -89,58 +89,56 @@
             >;
         };
 
-
         primp_programmers_num_row_layer {
             bindings = <
-&primp_ampersand_percent  &primp_one_plus  &primp_two_left_bracket  &primp_three_left_brace  &primp_four_left_parenthesis  &primp_five_equals  &trans                                      &trans  &primp_six_asterisk  &primp_seven_right_parenthesis  &primp_eight_right_brace  &primp_nine_right_bracket  &primp_zero_excl  &primp_hash_grave
-&trans                  &trans                &trans              &trans               &trans                    &trans         &trans                                      &trans  &trans            &trans                     &trans        &trans                 &trans               &primp_pipe_bslh
-&trans                  &trans                &trans              &trans               &trans                    &trans         &trans  &trans  &trans      &trans  &trans  &trans  &trans            &trans                     &trans        &trans                 &trans               &trans
-&trans                  &trans                &trans              &trans               &trans                    &trans                         &trans      &trans                  &trans            &trans                     &trans        &trans                 &trans               &trans
-&trans                  &primp_dollar_tilde     &trans              &trans               &trans                                   &trans  &trans  &trans      &trans  &trans  &trans                    &trans                     &trans        &kp SLASH              &primp_at_caret        &trans
+&primp_ampersand_percent  &primp_one_plus      &primp_two_left_bracket  &primp_three_left_brace  &primp_four_left_parenthesis  &primp_five_equals  &trans                                      &trans  &primp_six_asterisk  &primp_seven_right_parenthesis  &primp_eight_right_brace  &primp_nine_right_bracket  &primp_zero_excl  &primp_hash_grave
+&trans                    &trans               &trans                   &trans                   &trans                        &trans              &trans                                      &trans  &trans               &trans                          &trans                    &trans                     &trans            &primp_pipe_bslh
+&trans                    &trans               &trans                   &trans                   &trans                        &trans              &trans  &trans  &trans      &trans  &trans  &trans  &trans               &trans                          &trans                    &trans                     &trans            &trans
+&trans                    &trans               &trans                   &trans                   &trans                        &trans                              &trans      &trans                  &trans               &trans                          &trans                    &trans                     &trans            &trans
+&trans                    &primp_dollar_tilde  &trans                   &trans                   &trans                                            &trans  &trans  &trans      &trans  &trans  &trans                       &trans                          &trans                    &kp SLASH                  &primp_at_caret   &trans
             >;
         };
 
         symbol_layer {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans                  &trans                &trans              &trans               &trans                    &trans         &trans                                      &trans  &trans            &trans                     &trans        &trans                 &trans               &trans
-&trans                  &trans                &trans              &trans               &trans                    &trans         &trans  &trans  &trans      &trans  &trans  &trans  &trans            &trans                     &trans        &trans                 &trans               &trans
-&trans                  &trans                &trans              &trans               &trans                    &trans                         &trans      &trans                  &trans            &trans                     &trans        &trans                 &trans               &trans
-&trans                  &trans     &trans              &trans               &trans                                   &trans  &trans  &trans      &trans  &trans  &trans                    &trans                     &trans        &trans &trans        &trans
+&trans  &trans        &trans        &trans      &trans     &trans         &trans                                         &trans  &trans         &trans         &trans        &trans        &trans       &trans
+&trans  &kp GRAVE     &kp LS(LT)    &kp LS(GT)  &kp MINUS  &kp LS(PIPE)   &trans                                         &trans  &kp LS(CARET)  &kp LS(LBRC)   &kp LS(RBRC)  &kp LS(DLLR)  &kp TAB      &trans
+&trans  &kp LS(EXCL)  &kp LS(STAR)  &kp FSLH    &kp EQUAL  &kp LS(AMPS)   &trans  &trans  &trans         &trans  &trans  &trans  &kp LS(POUND)  &kp LS(LPAR)   &kp LS(RPAR)  &kp SEMI      &kp LS(DQT)  &trans
+&trans  &kp LS(DLLR)  &kp LS(PLUS)  &kp LBKT    &kp RBKT   &kp LS(PRCNT)                  &kp SPACE      &trans                  &kp LS(AT)     &kp LS(COLON)  &kp COMMA     &kp DOT       &kp SQT      &trans
+&trans  &trans        &trans        &trans      &trans                    &trans  &trans  &trans         &trans  &trans  &trans                 &trans         &trans        &trans        &trans       &trans
             >;
         };
-
 
         keypad_layer {
             display-name = "Kp";
             bindings = <
-&trans     &trans     &trans    &trans    &trans     &trans  &trans                                                   &mo MOD      &kp N6  &kp KP_NUM  &kp KP_EQUAL  &kp KP_DIVIDE  &kp KP_MULTIPLY  &kp MINUS
+&trans     &trans     &trans    &trans    &trans     &trans  &trans                                                   &mo MOD    &kp N6  &kp KP_NUM  &kp KP_EQUAL  &kp KP_DIVIDE  &kp KP_MULTIPLY  &kp MINUS
 &kp TAB    &kp Q      &kp W     &kp E     &kp R      &kp T   &none                                                    &none      &kp Y   &kp KP_N7   &kp KP_N8     &kp KP_N9      &kp KP_MINUS     &kp BSLH
 &kp ESC    &kp A      &kp S     &kp D     &kp F      &kp G   &none     &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL  &none      &kp H   &kp KP_N4   &kp KP_N5     &kp KP_N6      &kp KP_PLUS      &kp SQT
 &kp LSHFT  &kp Z      &kp X     &kp C     &kp V      &kp B                        &kp HOME      &kp PG_UP                        &kp N   &kp KP_N1   &kp KP_N2     &kp KP_N3      &kp KP_ENTER     &kp RSHFT
-&mo FN      &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT          &kp BSPC  &kp DEL    &kp END       &kp PG_DN  &kp ENTER  &kp KP_N0          &kp UP      &kp DOWN      &kp KP_DOT     &kp RBKT         &mo FN
+&mo FN     &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT          &kp BSPC  &kp DEL    &kp END       &kp PG_DN  &kp ENTER  &kp KP_N0          &kp UP      &kp DOWN      &kp KP_DOT     &kp RBKT         &mo FN
             >;
         };
 
         fn_layer {
             display-name = "Fn";
             bindings = <
-&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &tog KEY                                      &mo MOD   &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
-&trans  &trans  &trans  &trans  &trans  &trans  &none                                       &none   &trans  &trans  &trans  &trans   &trans   &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &none   &trans  &trans      &trans  &trans  &none   &trans  &trans  &trans  &trans   &trans   &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans   &trans   &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans   &trans   &trans
+&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &tog KEY                                      &mo MOD  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
+&trans  &trans  &trans  &trans  &trans  &trans  &none                                         &none    &trans  &trans  &trans  &trans   &trans   &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &none     &trans  &trans      &trans  &trans  &none    &trans  &trans  &trans  &trans   &trans   &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans      &trans                   &trans  &trans  &trans  &trans   &trans   &trans
+&trans  &trans  &trans  &trans  &trans          &trans    &trans  &trans      &trans  &trans  &trans           &trans  &trans  &trans   &trans   &trans
             >;
         };
 
         mod_layer {
             display-name = "Mod";
             bindings = <
-&none           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none                                                  &trans           &none  &none       &none       &none  &none  &none
-&none           &tog STURDY   &tog GALLIUM  &none         &none         &none         &bootloader                                            &bootloader      &none  &none       &none       &none  &none  &none
-&studio_unlock  &none         &none         &none         &none         &none         &none        &none  &none      &bt BT_CLR  &none       &stp STP_BAT     &none  &none       &none       &none  &none  &none
-&none           &tog ALT_MOD  &tog PROGRAMMERS_DVORAK    &tog PRIMP_PROGRAMMERS         &macro_ver    &none                             &none      &none                                    &none  &none       &none       &none  &none  &none
-&none           &none         &none         &none         &none                       &none        &none  &none      &none       &bl BL_TOG  &rgb_ug RGB_TOG         &bl BL_INC  &bl BL_DEC  &none  &none  &none
+&none           &bt BT_SEL 0  &bt BT_SEL 1             &bt BT_SEL 2            &bt BT_SEL 3  &bt BT_SEL 4  &none                                                  &trans           &none  &none       &none       &none  &none  &none
+&none           &tog STURDY   &tog GALLIUM             &none                   &none         &none         &bootloader                                            &bootloader      &none  &none       &none       &none  &none  &none
+&studio_unlock  &none         &none                    &none                   &none         &none         &none        &none  &none      &bt BT_CLR  &none       &stp STP_BAT     &none  &none       &none       &none  &none  &none
+&none           &tog ALT_MOD  &tog PROGRAMMERS_DVORAK  &tog PRIMP_PROGRAMMERS  &macro_ver    &none                             &none      &none                                    &none  &none       &none       &none  &none  &none
+&none           &none         &none                    &none                   &none                       &none        &none  &none      &none       &bl BL_TOG  &rgb_ug RGB_TOG         &bl BL_INC  &bl BL_DEC  &none  &none  &none
             >;
         };
 
