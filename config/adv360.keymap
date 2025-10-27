@@ -44,6 +44,15 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        colon {
+            bindings = <&kp LS(SEMI)>;
+            key-positions = <56 57>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
