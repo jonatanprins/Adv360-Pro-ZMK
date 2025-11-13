@@ -148,7 +148,7 @@
 &trans  &trans        &trans        &trans      &trans     &trans         &trans                                         &trans  &trans         &trans         &trans        &trans        &trans       &trans
 &trans  &kp GRAVE     &kp LS(LT)    &kp LS(GT)  &kp MINUS  &kp LS(PIPE)   &trans                                         &trans  &kp LS(CARET)  &kp LS(LBRC)   &kp LS(RBRC)  &kp LS(DLLR)  &kp TAB      &trans
 &trans  &kp LS(EXCL)  &kp LS(STAR)  &kp FSLH    &kp EQUAL  &kp LS(AMPS)   &trans  &trans  &trans         &trans  &trans  &trans  &kp LS(POUND)  &kp LS(LPAR)   &kp LS(RPAR)  &kp SEMI      &kp LS(DQT)  &trans
-&trans  &kp LS(DLLR)  &kp LS(PLUS)  &kp LBKT    &kp RBKT   &kp LS(PRCNT)                  &kp SPACE      &trans                  &kp LS(AT)     &kp LS(COLON)  &kp COMMA     &kp DOT       &kp SQT      &trans
+&trans  &kp LS(GRAVE)  &kp LS(PLUS)  &kp LBKT    &kp RBKT   &kp LS(PRCNT)                  &kp SPACE      &trans                  &kp LS(AT)     &kp LS(COLON)  &kp COMMA     &kp DOT       &kp SQT      &trans
 &trans  &trans        &trans        &trans      &trans                    &trans  &trans  &trans         &trans  &trans  &trans                 &trans         &trans        &trans        &trans       &trans
             >;
         };
