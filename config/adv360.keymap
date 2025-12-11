@@ -28,6 +28,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "LEFT_MT";
             bindings = <&mo>, <&kp>;
+
             #binding-cells = <2>;
             hold-trigger-key-positions = <40 58 41 59 42 43 44 45 22 23 25 24 26 27 57 56 55 54 71 72 73 74 75>;
             tapping-term-ms = <500>;
@@ -38,6 +39,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "RIGHT_MT";
             bindings = <&mo>, <&kp>;
+
             #binding-cells = <2>;
             tapping-term-ms = <500>;
             flavor = "balanced";
@@ -68,14 +70,9 @@
         doubleescape: doubleescape {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings
-                = <&macro_tap &kp ESC>
-                , <&macro_tap &kp ESC>
-
-                ;
+            bindings = <&macro_tap>, <&kp ESC>, <&macro_tap>, <&kp ESC>;
         };
     };
-
 
     combos {
         compatible = "zmk,combos";
@@ -92,11 +89,11 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&kp EQUAL  &kp N1     &kp N2        &kp N3    &kp N4        &kp N5  &tog 5                                                        &mo 9      &kp N6  &kp N7    &kp N8        &kp N9         &kp N0     &kp MINUS
-&kp TAB    &kp Q      &kp W         &kp F     &kp P         &kp B   &none                                                         &none      &kp J   &kp L     &kp U         &kp Y          &kp SEMI   &kp BSLH
-&kp ESC    &kp A      &left_mt 6 R  &kp S     &left_mt 4 T  &kp G   &none     &kp LCTRL  &kp LALT        &kp LEFT_ALT  &kp RCTRL  &none      &kp M   &kp N     &kp E         &right_mt 6 I  &kp O      &kp MINUS
-&sk LSHFT  &kp Z      &kp X         &kp C     &kp D         &kp V                        &kp DELETE      &kp PG_UP                           &kp K   &kp H     &kp COMMA     &kp DOT        &kp SLASH  &sk RSHFT
-&mo 8      &kp GRAVE  &kp CAPS      &kp LEFT  &kp RIGHT             &kp BSPC  &kp SQT    &mo 7           &kp PG_DN     &kp ENTER  &kp SPACE          &kp DOWN  &kp UP_ARROW  &kp LBKT       &kp RBKT   &mo 8
+&kp EQUAL  &kp N1     &kp N2        &kp N3    &kp N4        &kp N5  &tog 5                                                        &mo 10     &kp N6  &kp N7         &kp N8        &kp N9         &kp N0     &kp MINUS
+&kp TAB    &kp Q      &kp W         &kp F     &kp P         &kp B   &none                                                         &none      &kp J   &kp L          &kp U         &kp Y          &kp SEMI   &kp BSLH
+&kp ESC    &kp A      &left_mt 6 R  &kp S     &left_mt 4 T  &kp G   &none     &kp LCTRL  &kp LALT        &kp LEFT_ALT  &kp RCTRL  &none      &kp M   &right_mt 7 N  &kp E         &right_mt 6 I  &kp O      &kp MINUS
+&sk LSHFT  &kp Z      &kp X         &kp C     &kp D         &kp V                        &kp DELETE      &kp PG_UP                           &kp K   &kp H          &kp COMMA     &kp DOT        &kp SLASH  &sk RSHFT
+&mo 9      &kp GRAVE  &kp CAPS      &kp LEFT  &kp RIGHT             &kp BSPC  &kp SQT    &mo 8           &kp PG_DN     &kp ENTER  &kp SPACE          &kp DOWN       &kp UP_ARROW  &kp LBKT       &kp RBKT   &mo 9
             >;
         };
 
@@ -152,29 +149,39 @@
 
         symbol_layer {
             bindings = <
-&trans  &trans        &trans        &trans      &trans     &trans         &trans                                         &trans  &trans         &trans         &trans        &trans        &trans       &trans
-&trans  &kp GRAVE     &kp LS(LT)    &kp LS(GT)  &kp MINUS  &kp LS(PIPE)   &trans                                         &trans  &kp LS(CARET)  &kp LS(LBRC)   &kp LS(RBRC)  &kp LS(DLLR)  &kp TAB      &trans
-&trans  &kp LS(EXCL)  &kp LS(STAR)  &kp FSLH    &kp EQUAL  &kp LS(AMPS)   &trans  &trans  &trans         &trans  &trans  &trans  &kp LS(POUND)  &kp LS(LPAR)   &kp LS(RPAR)  &kp SEMI      &kp LS(DQT)  &trans
+&trans  &trans         &trans        &trans      &trans     &trans         &trans                                         &trans  &trans         &trans         &trans        &trans        &trans       &trans
+&trans  &kp GRAVE      &kp LS(LT)    &kp LS(GT)  &kp MINUS  &kp LS(PIPE)   &trans                                         &trans  &kp LS(CARET)  &kp LS(LBRC)   &kp LS(RBRC)  &kp LS(DLLR)  &kp TAB      &trans
+&trans  &kp LS(EXCL)   &kp LS(STAR)  &kp FSLH    &kp EQUAL  &kp LS(AMPS)   &trans  &trans  &trans         &trans  &trans  &trans  &kp LS(POUND)  &kp LS(LPAR)   &kp LS(RPAR)  &kp SEMI      &kp LS(DQT)  &trans
 &trans  &kp LS(GRAVE)  &kp LS(PLUS)  &kp LBKT    &kp RBKT   &kp LS(PRCNT)                  &kp SPACE      &trans                  &kp LS(AT)     &kp LS(COLON)  &kp COMMA     &kp DOT       &kp SQT      &trans
-&trans  &trans        &trans        &trans      &trans                    &trans  &trans  &trans         &trans  &trans  &trans                 &trans         &trans        &trans        &trans       &trans
+&trans  &trans         &trans        &trans      &trans                    &trans  &trans  &trans         &trans  &trans  &trans                 &trans         &trans        &trans        &trans       &trans
+            >;
+        };
+
+        layer_14 {
+            bindings = <
+&trans  &trans     &trans  &trans  &trans  &trans         &trans                                      &trans  &trans  &trans  &trans  &trans     &trans    &trans
+&trans  &kp FSLH   &kp N9  &kp N8  &kp N7  &kp LS(STAR)   &trans                                      &trans  &trans  &trans  &trans  &trans     &trans    &trans
+&trans  &kp MINUS  &kp N3  &kp N2  &kp N1  &kp LS(PLUS)   &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &kp LCTRL  &kp LALT  &trans
+&trans  &kp X      &kp N6  &kp N5  &kp N4  &kp LS(PRCNT)                  &trans      &trans                  &trans  &trans  &trans  &trans     &trans    &trans
+&trans  &trans     &trans  &trans  &trans                 &trans  &trans  &trans      &trans  &kp N0  &trans          &trans  &trans  &trans     &trans    &trans
             >;
         };
 
         keypad_layer {
             display-name = "Kp";
             bindings = <
-&trans     &trans     &trans    &trans    &trans     &trans  &trans                                                   &mo 9      &kp N6  &kp KP_NUM  &kp KP_EQUAL  &kp KP_DIVIDE  &kp KP_MULTIPLY  &kp MINUS
+&trans     &trans     &trans    &trans    &trans     &trans  &trans                                                   &mo 10     &kp N6  &kp KP_NUM  &kp KP_EQUAL  &kp KP_DIVIDE  &kp KP_MULTIPLY  &kp MINUS
 &kp TAB    &kp Q      &kp W     &kp E     &kp R      &kp T   &none                                                    &none      &kp Y   &kp KP_N7   &kp KP_N8     &kp KP_N9      &kp KP_MINUS     &kp BSLH
 &kp ESC    &kp A      &kp S     &kp D     &kp F      &kp G   &none     &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL  &none      &kp H   &kp KP_N4   &kp KP_N5     &kp KP_N6      &kp KP_PLUS      &kp SQT
 &kp LSHFT  &kp Z      &kp X     &kp C     &kp V      &kp B                        &kp HOME      &kp PG_UP                        &kp N   &kp KP_N1   &kp KP_N2     &kp KP_N3      &kp KP_ENTER     &kp RSHFT
-&mo 8      &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT          &kp BSPC  &kp DEL    &kp END       &kp PG_DN  &kp ENTER  &kp KP_N0          &kp UP      &kp DOWN      &kp KP_DOT     &kp RBKT         &mo 8
+&mo 9      &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT          &kp BSPC  &kp DEL    &kp END       &kp PG_DN  &kp ENTER  &kp KP_N0          &kp UP      &kp DOWN      &kp KP_DOT     &kp RBKT         &mo 9
             >;
         };
 
         fn_layer {
             display-name = "Fn";
             bindings = <
-&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &tog 7                                      &mo 9   &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
+&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &tog 8                                      &mo 10  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
 &trans  &trans  &trans  &trans  &trans  &trans  &none                                       &none   &trans  &trans  &trans  &trans   &trans   &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &none   &trans  &trans      &trans  &trans  &none   &trans  &trans  &trans  &trans   &trans   &trans
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans   &trans   &trans
