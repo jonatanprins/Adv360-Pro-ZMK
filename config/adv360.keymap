@@ -28,7 +28,6 @@
             compatible = "zmk,behavior-hold-tap";
             label = "LEFT_HMR";
             bindings = <&kp>, <&kp>;
-
             #binding-cells = <2>;
             tapping-term-ms = <500>;
             quick-tap-ms = <200>;
@@ -41,7 +40,6 @@
             compatible = "zmk,behavior-hold-tap";
             label = "RIGHT_HMR";
             bindings = <&kp>, <&kp>;
-
             #binding-cells = <2>;
             tapping-term-ms = <500>;
             quick-tap-ms = <200>;
@@ -54,22 +52,22 @@
             compatible = "zmk,behavior-hold-tap";
             label = "LEFT_MT";
             bindings = <&mo>, <&kp>;
-
             #binding-cells = <2>;
-            hold-trigger-key-positions = <40 58 41 59 42 43 44 45 22 23 25 24 26 27 57 56 55 54 71 72 73 74 75 66 69>;
             tapping-term-ms = <500>;
             flavor = "balanced";
+            hold-trigger-key-positions = <40 58 41 59 42 43 44 45 22 23 25 24 26 27 57 56 55 54 71 72 73 74 75 66 69>;
+            hold-trigger-on-release;
         };
 
         right_mt: right_mt {
             compatible = "zmk,behavior-hold-tap";
             label = "RIGHT_MT";
             bindings = <&mo>, <&kp>;
-
             #binding-cells = <2>;
             tapping-term-ms = <500>;
             flavor = "balanced";
             hold-trigger-key-positions = <51 50 49 48 47 33 32 29 30 31 15 16 17 19 18 64 63 62 61 60 46 28 14 69 66>;
+            hold-trigger-on-release;
         };
 
         layer_tap: layer_tap {
