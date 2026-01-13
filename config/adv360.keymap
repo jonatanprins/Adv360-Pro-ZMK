@@ -202,11 +202,11 @@
 
         win_layer {
             bindings = <
-&trans  &trans  &trans      &trans      &trans            &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans      &trans      &trans            &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp LA(N3)  &kp LA(N2)  &kp LA(NUMBER_1)  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp LA(N6)  &kp LA(N5)  &kp LA(N4)        &trans                  &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans      &trans      &trans                    &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &trans        &trans      &trans            &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &kp LA(LEFT)  &trans      &kp LA(RIGHT)     &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LA(R)  &kp LA(N3)    &kp LA(N2)  &kp LA(NUMBER_1)  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &kp LA(N6)    &kp LA(N5)  &kp LA(N4)        &trans                  &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &trans        &trans      &trans                    &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
 
