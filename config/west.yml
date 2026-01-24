@@ -4,7 +4,12 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: refil
       url-base: https://github.com/refil
+    - name: urob
+      url-base: https://github.com/urob
   projects:
+    - name: zmk-adaptive-key
+      remote: urob
+      revision: v0.3 # Should match ZMK release.
     - name: zmk
       remote: refil
       revision: adv360-z3.5-2
