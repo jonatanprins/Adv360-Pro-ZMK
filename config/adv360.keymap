@@ -21,15 +21,22 @@
 / {
     behaviors {
         #include "macros.dtsi"
-      #include "extra_morphs.dtsi"
-      #include "version.dtsi"
+        #include "extra_morphs.dtsi"
+        #include "version.dtsi"
+
+        morph_caps: morph_caps {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MOD_MORPH_CAPS";
+            #binding-cells = <0>;
+            bindings = <&sk LSHIFT>, <&caps_word>;
+            mods = <(MOD_LSFT)>;
+        };
 
         magic_key: magic_key {
             compatible = "zmk,behavior-adaptive-key";
             #binding-cells = <0>;
-            bindings = <&repeat_key>;
-
-            akt_ij { trigger-keys = <I>; max-prior-idle-ms = <300>; bindings = <&kp J>; };
+            bindings = <&key_repeat>;
+            magic_ij { trigger-keys = <I>; max-prior-idle-ms = <500>; bindings = <&kp J>; };
         };
 
         left_hmr: left_hmr {
@@ -137,9 +144,9 @@
             bindings = <
 &kp EQUAL  &kp N1     &kp N2    &kp N3    &kp N4     &kp N5  &tog 5                                                            &mo 11     &kp N6  &kp N7    &kp N8        &kp N9      &kp N0     &kp MINUS
 &kp TAB    &kp Q      &kp W     &kp F     &kp P      &kp B   &none                                                             &none      &kp J   &kp L     &kp U         &kp Y       &kp SEMI   &kp BSLH
-&kp BSPC   &kp A      &kp R     &kp S     &kp T      &kp G   &none     &sk LSHFT      &kp LALT        &kp LEFT_ALT  &sk RSHFT   &none      &kp M   &kp N     &kp E         &kp I       &kp O      &kp MINUS
+&kp BSPC   &kp A      &kp R     &kp S     &kp T      &kp G   &none     &sk LSHFT      &kp LALT        &kp LEFT_ALT  &morph_caps   &none      &kp M   &kp N     &kp E         &kp I       &kp O      &kp MINUS
 &kp LS(SEMI)   &kp Z      &kp X     &kp C     &kp D      &kp V                            &kp DELETE      &kp PG_UP                           &kp K   &kp H     &kp COMMA     &kp PERIOD  &kp SLASH  &kp ENTER
-&mo 10     &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT          &key_repeat  &kp ESC  &mo 9           &kp PG_DN     &kp LS(MINUS) &kp SPACE          &kp DOWN  &kp UP_ARROW  &kp LBKT    &kp RBKT   &mo 10
+&mo 10     &kp GRAVE  &kp CAPS  &kp LG(LC(LEFT))    &kp LG(LC(RIGHT))          &magic_key  &kp ESC  &kp LG(GRAVE)           &kp LG(GRAVE)     &kp LS(MINUS) &kp SPACE          &kp DOWN  &kp UP_ARROW  &kp LBKT    &kp RBKT   &mo 10
             >;
         };
 
