@@ -29,6 +29,7 @@
             label = "MOD_MORPH_CAPS";
             #binding-cells = <0>;
             bindings = <&sk LSHIFT>, <&caps_word>;
+
             mods = <(MOD_LSFT)>;
         };
 
@@ -36,13 +37,19 @@
             compatible = "zmk,behavior-adaptive-key";
             #binding-cells = <0>;
             bindings = <&key_repeat>;
-            magic_ij { trigger-keys = <I>; max-prior-idle-ms = <500>; bindings = <&kp J>; };
+
+            magic_ij {
+                trigger-keys = <I>;
+                max-prior-idle-ms = <500>;
+                bindings = <&kp J>;
+            };
         };
 
         left_hmr: left_hmr {
             compatible = "zmk,behavior-hold-tap";
             label = "LEFT_HMR";
             bindings = <&kp>, <&kp>;
+
             #binding-cells = <2>;
             tapping-term-ms = <1000>;
             quick-tap-ms = <200>;
@@ -142,11 +149,11 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&kp EQUAL  &kp N1     &kp N2    &kp N3    &kp N4     &kp N5  &tog 5                                                            &mo 11     &kp N6  &kp N7    &kp N8        &kp N9      &kp N0     &kp MINUS
-&kp TAB    &kp Q      &kp W     &kp F     &kp P      &kp B   &none                                                             &none      &kp J   &kp L     &kp U         &kp Y       &kp SEMI   &kp BSLH
-&kp BSPC   &kp A      &kp R     &kp S     &kp T      &kp G   &none     &sk LSHFT      &kp LALT        &kp LEFT_ALT  &morph_caps   &none      &kp M   &kp N     &kp E         &kp I       &kp O      &kp MINUS
-&kp LS(SEMI)   &kp Z      &kp X     &kp C     &kp D      &kp V                            &kp DELETE      &kp PG_UP                           &kp K   &kp H     &kp COMMA     &kp PERIOD  &kp SLASH  &kp ENTER
-&mo 10     &kp GRAVE  &kp CAPS  &kp LG(LC(LEFT))    &kp LG(LC(RIGHT))          &magic_key  &kp ESC  &kp LG(GRAVE)           &kp LG(GRAVE)     &kp LS(MINUS) &kp SPACE          &kp DOWN  &kp UP_ARROW  &kp LBKT    &kp RBKT   &mo 10
+&kp EQUAL    &kp N1     &kp N2    &kp N3    &kp N4     &kp N5  &tog 5                                                               &mo 11     &kp N6  &kp N7    &kp N8        &kp N9      &kp N0     &kp MINUS
+&kp TAB      &kp Q      &kp W     &kp F     &kp P      &kp B   &none                                                                &none      &kp J   &kp L     &kp U         &kp Y       &kp SEMI   &kp BSLH
+&kp BSPC     &kp A      &kp R     &kp S     &kp T      &kp G   &none       &kp LCTRL  &kp LALT           &kp LEFT_ALT   &kp RCTRL   &none      &kp M   &kp N     &kp E         &kp I       &kp O      &kp MINUS
+&morph_caps  &kp Z      &kp X     &kp C     &kp D      &kp V                          &kp DELETE         &kp RGUI                              &kp K   &kp H     &kp COMMA     &kp PERIOD  &kp SLASH  &morph_caps
+&mo 10       &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT          &magic_key  &kp ESC    &kp LG(GRAVE)      &kp LS(MINUS)  &kp RETURN  &kp SPACE          &kp DOWN  &kp UP_ARROW  &kp LBKT    &kp RBKT   &mo 10
             >;
         };
 
@@ -172,11 +179,11 @@
 
         alt_mod_layer {
             bindings = <
-&trans  &trans                &trans        &trans                  &trans             &trans  &trans                                      &trans  &trans  &trans              &trans                    &trans              &trans                 &trans
-&trans  &trans                &trans        &trans                  &trans             &trans  &trans                                      &trans  &trans  &trans              &trans                    &trans              &trans                 &trans
-&trans  &left_hmr LEFT_ALT A  &left_mt 6 R  &left_hmr LEFT_SHIFT S  &left_mt 4 T       &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &right_mt 7 N       &right_hmr RIGHT_SHIFT E  &right_mt 6 I       &right_hmr LEFT_ALT O  &trans
-&trans  &trans                &trans        &trans                  &left_hmr LCTRL D  &trans                  &trans      &trans                  &trans  &right_hmr RCTRL H  &trans                    &right_mt 8 PERIOD  &trans                 &trans
-&trans  &trans                &trans        &trans                  &trans                     &trans  &trans  &trans      &trans  &trans  &trans          &trans              &trans                    &trans              &trans                 &trans
+&trans        &trans                &trans        &trans                  &trans             &trans  &trans                                                &trans  &trans  &trans              &trans                    &trans              &trans                 &trans
+&trans        &trans                &trans        &trans                  &trans             &trans  &trans                                                &trans  &trans  &trans              &trans                    &trans              &trans                 &trans
+&kp BSPC      &left_hmr LEFT_ALT A  &left_mt 6 R  &left_hmr LEFT_SHIFT S  &left_mt 4 T       &trans  &trans  &morph_caps  &trans      &trans  &morph_caps  &trans  &trans  &right_mt 7 N       &right_hmr RIGHT_SHIFT E  &right_mt 6 I       &right_hmr LEFT_ALT O  &trans
+&kp LS(SEMI)  &trans                &trans        &trans                  &left_hmr LCTRL D  &trans                       &trans      &trans                       &trans  &right_hmr RCTRL H  &trans                    &right_mt 8 PERIOD  &trans                 &trans
+&trans        &trans                &trans        &trans                  &trans                     &trans  &trans       &trans      &trans  &trans       &trans          &trans              &trans                    &trans              &trans                 &trans
             >;
         };
 
@@ -193,7 +200,7 @@
         primp_programmers_num_row_layer {
             bindings = <
 &primp_ampersand_percent  &primp_one_plus      &primp_two_left_bracket  &primp_three_left_brace  &primp_four_left_parenthesis  &primp_five_equals  &trans                                      &trans  &primp_six_asterisk  &primp_seven_right_parenthesis  &primp_eight_right_brace  &primp_nine_right_bracket  &primp_zero_excl  &primp_hash_grave
-&trans                    &trans               &trans                   &trans                   &trans                        &trans              &trans                                      &trans  &trans               &trans                          &trans                    &trans                     &trans            &primp_pipe_bslh
+&trans                    &trans               &trans                   &trans                   &trans                        &trans              &trans                                      &trans  &trans               &trans                          &trans                    &trans                     &trans            &trans
 &trans                    &trans               &trans                   &trans                   &trans                        &trans              &trans  &trans  &trans      &trans  &trans  &trans  &trans               &trans                          &trans                    &trans                     &trans            &trans
 &trans                    &trans               &trans                   &trans                   &trans                        &trans                              &trans      &trans                  &trans               &trans                          &trans                    &trans                     &trans            &trans
 &trans                    &primp_dollar_tilde  &trans                   &trans                   &trans                                            &trans  &trans  &trans      &trans  &trans  &trans                       &trans                          &trans                    &kp SLASH                  &primp_at_caret   &trans
