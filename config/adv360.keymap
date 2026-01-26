@@ -182,7 +182,7 @@
 &trans        &trans                &trans        &trans                  &trans             &trans  &trans                                                &trans  &trans  &trans              &trans                    &trans              &trans                 &trans
 &trans        &trans                &trans        &trans                  &trans             &trans  &trans                                                &trans  &trans  &trans              &trans                    &trans              &trans                 &trans
 &kp BSPC      &left_hmr LEFT_ALT A  &left_mt 6 R  &left_hmr LEFT_SHIFT S  &left_mt 4 T       &trans  &trans  &morph_caps  &trans      &trans  &morph_caps  &trans  &trans  &right_mt 7 N       &right_hmr RIGHT_SHIFT E  &right_mt 6 I       &right_hmr LEFT_ALT O  &trans
-&kp LS(SEMI)  &trans                &trans        &trans                  &left_hmr LCTRL D  &trans                       &trans      &trans                       &trans  &right_hmr RCTRL H  &trans                    &right_mt 8 PERIOD  &trans                 &trans
+&kp LS(SEMI)  &trans                &trans        &trans                  &left_hmr LCTRL D  &trans                       &trans      &trans                       &trans  &right_hmr RCTRL H  &trans                    &right_mt 8 PERIOD  &trans                 &kp RETURN
 &trans        &trans                &trans        &trans                  &trans                     &trans  &trans       &trans      &trans  &trans       &trans          &trans              &trans                    &trans              &trans                 &trans
             >;
         };
