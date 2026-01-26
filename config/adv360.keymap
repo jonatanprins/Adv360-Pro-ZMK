@@ -193,7 +193,7 @@
 &trans      &trans  &trans  &trans  &trans  &trans  &trans                                            &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &kp ESCAPE  &trans  &trans  &trans  &trans  &trans  &trans    &trans      &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans      &trans  &trans  &trans  &trans  &trans                        &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans      &trans  &trans  &trans  &trans          &kp BSPC  &kp ESCAPE  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+&trans      &trans  &trans  &trans  &trans          &kp BSPC  &magic_key  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
 
